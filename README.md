@@ -41,6 +41,15 @@ The full inventory of **108 relay implementations** (55 maintained) is in
 - Ark Payments extension spec: [nostr-wallet-connect/nwc#11](https://github.com/nostr-wallet-connect/nwc/pull/11)
 - Payment-rail-neutral NIP-47 core wording: [nostr-protocol/nips#2520](https://github.com/nostr-protocol/nips/pull/2520)
 
+## Blossom (file hosting)
+
+The same idea for media servers. Blossom's BUD-07 already uses HTTP 402 with `X-Lightning` and `X-Cashu`
+headers and allows new methods.
+- `X-Ark`, native Ark payments for BUD-07: spec [`specs/blossom-x-ark.md`](specs/blossom-x-ark.md),
+  draft PR [hzrd149/blossom#116](https://github.com/hzrd149/blossom/pull/116).
+- Server support (inventory in progress): nostrcheck-server already sends `X-Lightning` and runs
+  share.yabu.me and cdn.nostrcheck.me; route96 bills over LND; blob-drop takes Cashu.
+
 ## Contributing
 
 Corrections to the inventory are very welcome (open an issue or PR here). Each upstream change
