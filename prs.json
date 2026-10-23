@@ -1,9 +1,18 @@
 {
   "strfry": {
     "nip11": "[#278](https://github.com/hoytech/strfry/pull/278) (draft)",
-    "payments": "plugin [strfry-bark-paid-writes](https://github.com/mvuk/strfry-bark-paid-writes) · read allowlist [#279](https://github.com/hoytech/strfry/pull/279) · listing [#280](https://github.com/hoytech/strfry/pull/280)"
+    "payments": "plugin [strfry-bark-paid-writes](https://github.com/mvuk/strfry-bark-paid-writes) \u00b7 read allowlist [#279](https://github.com/hoytech/strfry/pull/279) \u00b7 listing [#280](https://github.com/hoytech/strfry/pull/280)"
   },
-  "nostr-rs-relay": {"nip11": "in preparation", "payments": "in preparation"},
-  "nostr-relay (mattn)": {"nip11": "in preparation", "payments": "in preparation"},
-  "cagliostr": {"nip11": "in preparation", "payments": "in preparation"}
+  "nostr-rs-relay": {
+    "nip11": "[#257](https://github.com/scsibug/nostr-rs-relay/pull/257) (draft; fixes `payments_url`, #224)",
+    "payments": "Bark processor [#258](https://github.com/scsibug/nostr-rs-relay/pull/258) (draft, stacked on #257)"
+  },
+  "nostr-relay (mattn)": {
+    "nip11": "in preparation",
+    "payments": "in preparation"
+  },
+  "cagliostr": {
+    "nip11": "in preparation",
+    "payments": "in preparation"
+  }
 }

@@ -7,7 +7,7 @@ Legend: **NIP-11 PR** = the completeness change · **Payments PR** = the optiona
 | Implementation | Language | Maintained | NIP-11 today | NIP-11 PR | Payments PR |
 |---|---|---|---|---|---|
 | [strfry](https://github.com/hoytech/strfry) | C++ (LMDB) | y | partial (missing payments_url, fees, limitation.auth_requir… | [#278](https://github.com/hoytech/strfry/pull/278) (draft) | plugin [strfry-bark-paid-writes](https://github.com/mvuk/strfry-bark-paid-writes) · read allowlist [#279](https://github.com/hoytech/strfry/pull/279) · listing [#280](https://github.com/hoytech/strfry/pull/280) |
-| [nostr-rs-relay](https://git.sr.ht/~gheartsfield/nostr-rs-relay) | Rust (SQLite/Postgres) | unclear (… | partial (BUG: serializes `payment_url` not `payments_url`; … | in preparation | in preparation |
+| [nostr-rs-relay](https://git.sr.ht/~gheartsfield/nostr-rs-relay) | Rust (SQLite/Postgres) | unclear (… | partial (BUG: serializes `payment_url` not `payments_url`; … | [#257](https://github.com/scsibug/nostr-rs-relay/pull/257) (draft; fixes `payments_url`, #224) | Bark processor [#258](https://github.com/scsibug/nostr-rs-relay/pull/258) (draft, stacked on #257) |
 | [nostream](https://github.com/Cameri/nostream) | TypeScript (Postgres, Redis) | y | near-full (missing fees.subscription (subscriptionPlans exi… | planned | planned |
 | [khatru](https://github.com/fiatjaf/khatru) | Go (framework) | y (via no… | framework: struct can serve almost all (nostrlib nip11: nam… | planned | planned |
 | [haven](https://github.com/bitvora/haven) | Go (khatru v0.19 + go-nostr) | y | partial (only name, description, icon, pubkey, software, ve… | planned | planned |
