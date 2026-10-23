@@ -1,0 +1,97 @@
+url,region,status,global_rank,global_lists,jp_rank,jp_lists,software,software_raw,version,name,paid,payment_required,restricted_writes,auth_required,fees,payments_url,nonstandard_payment_keys,limitation_keys,supported_nips,source,notes
+wss://nos.lol,global,live,1,427,2,203,strfry,git+https://github.com/hoytech/strfry.git,1.1.3,nos.lol,free,,,,,,,3,9,live probe 2026-10-23,
+wss://relay.damus.io,global,live,2,396,3,167,strfry,git+https://github.com/hoytech/strfry.git,1.1.0-158-gb705403ddf49,damus.io,free,,,,,,,3,10,live probe 2026-10-23,
+wss://relay.primal.net,global,live,3,373,6,90,strfry,git+https://github.com/hoytech/strfry.git,1.1.3,Primal Public Relay,free,,,,,,,3,9,live probe 2026-10-23,
+wss://nostr.mom,global,live,4,229,10,58,strfry,git+https://github.com/hoytech/strfry.git,1.1.3,nostr.mom,free,,,,,,,3,9,live probe 2026-10-23,
+wss://offchain.pub,global,live,5,119,17,30,strfry,git+https://github.com/hoytech/strfry.git,1.1.0,offchain.pub,free,,,,,,,3,10,live probe 2026-10-23,
+wss://nostr.bitcoiner.social,global,live,6,115,12,44,strfry,git+https://github.com/hoytech/strfry.git,1.1.0,bitcoiner.social,free,,,,,,,3,10,live probe 2026-10-23,
+wss://relay.snort.social,global,live,7,112,9,62,memlay (v0l),https://github.com/v0l/memlay,0.2.0,memlay,free,,,,,,,4,3,live probe 2026-10-23,"Snort's relay, now v0l/memlay (in-memory)"
+wss://nostr.oxtr.dev,global,live,8,88,14,38,strfry,git+https://github.com/hoytech/strfry.git,1.0.4,0xtr relay,free,,,,,,,3,10,live probe 2026-10-23,
+wss://nostr.wine,global,live,9,82,8,66,nostr.wine (proprietary),https://nostr.wine,0.3.3,nostr.wine,paid (fees advertised),true,true,false,"{""admission"":[{""amount"":18888000,""unit"":""msats""}]}",https://nostr.wine/invoices,,11,9,live probe 2026-10-23,"paid: 18,888 sats admission; payments_url invoice page"
+wss://nostr-pub.wellorder.net,global,live,10,78,16,32,nostr-rs-relay,https://git.sr.ht/~gheartsfield/nostr-rs-relay,0.9.0,wellorder-relay,free,false,false,,,,,2,11,live probe 2026-10-23,
+wss://relay.ditto.pub,global,live,11,68,20,24,Ditto,https://gitworkshop.dev/soapbox.pub/ditto-relay,2.5.0,Ditto Relay,free,false,,false,,,,11,10,live probe 2026-10-23,
+wss://relay.nostr.net,global,live,12,53,33,13,strfry,git+https://github.com/hoytech/strfry.git,1.1.2-148-g4cd3cf6,relay.nostr.net,free,,,,,,,3,11,live probe 2026-10-23,
+wss://purplepag.es,global,live,13,52,21,23,purplepag.es (pablof7z),https://github.com/pablof7z/purplepag.es,0.2.0,purplepag.es,free,false,false,false,,,,9,8,live probe 2026-10-23,
+wss://pyramid.fiatjaf.com,global,live,14,47,36,12,pyramid (khatru),https://github.com/fiatjaf/pyramid,v1.4.3-6f82bfe4,the fiatjaf pyramid,restricted (non-payment: WoT/allowlist/auth),false,true,false,,,,9,15,live probe 2026-10-23,
+wss://relay.nostr.com,global,live,15,47,62,7,strfry,git+https://github.com/hoytech/strfry.git,1.1.0,nostr.com,free,,,,,,,3,10,live probe 2026-10-23,
+wss://relay.nostr.band,global,unreachable (TimeoutError),16,45,11,50,nostr.band (proprietary),https://relay.nostr.band,0.4,Nostr.Band Relay,free,,,,,,,0,8,NIP-66 cache 2026-02-06 (monitor 9ba046db),nostr.band; NIP-11 timed out 2x today; NIP-66 cache last Feb 2026 (service may be winding down; guess)
+wss://nostrelites.org,global,live,17,41,96,5,wot-relay (khatru),https://github.com/barrydeen/wot-relay,v0.2.1-18-g1a4b005,Nostr Elites Relay,paid (fees advertised),true,true,false,"{""subscription"":[{""amount"":50000000,""unit"":""msats"",""period"":2592000}]}",https://nostrelites.org/,,5,3,live probe 2026-10-23,"wot-relay with 50,000 sats/30d subscription advertised"
+wss://wot.utxo.one,global,live,18,38,177,3,wot-relay (khatru),https://github.com/barrydeen/wot-relay,0.2.1,utxo WoT relay,free,,,,,,,0,3,live probe 2026-10-23,
+wss://nostr.land,global,live,19,37,13,42,"NFDB (nostr.land, proprietary)",NFDB,2.0 γ5,✨ nostr.land,paid-no-fees,true,,false,,https://nostr.land,,5,0,live probe 2026-10-23,paid relay (nostr.land subscription); payment_required true but no fees object
+wss://wot.nostr.party,global,live,20,35,363,2,wot-relay (khatru),https://github.com/barrydeen/wot-relay,0.2.1,Shawn's WoT relay,free,,,,,,,0,3,live probe 2026-10-23,
+wss://relay.highlighter.com,global,live,21,33,,,khatru,https://pkg.go.dev/fiatjaf.com/nostr/khatru,n/a,Highlighter,free,,,,,,,0,8,live probe 2026-10-23,"Highlighter (pablof7z) relay, khatru"
+wss://relay.zapclub.io,global,live,22,33,,,khatru,https://github.com/fiatjaf/khatru,n/a,zapclub,free,,,,,,,0,8,live probe 2026-10-23,
+wss://relay.nostr.watch,global,live,23,29,31,14,strfry,git+https://github.com/hoytech/strfry.git,0.9.6-26-gc0dec7c,relay.nostr.watch,free,,,,,,,0,12,live probe 2026-10-23,
+wss://nostr-01.yakihonne.com,global,live,24,27,27,17,strfry,git+https://github.com/hoytech/strfry.git,0.9.6-8-g013d611,YakiHonne strfry relay-0,free,,,,,,,0,12,live probe 2026-10-23,
+wss://chat.wisp.talk,global,live,25,22,162,4,"croissant (fiatjaf, khatru-family; guess)",https://viewsource.win/fiatjaf.com/croissant,n/a,Wisp Chat,free,,,,,,,0,8,live probe 2026-10-23,"Wisp chat (NIP-29 groups), fiatjaf croissant"
+wss://relay.nostrfeed.com,global,live,26,22,300,3,strfry,git+https://github.com/hoytech/strfry.git,1.1.1-119-g9acdaeb,NostrFeed Relay,free,,,,,,,3,18,live probe 2026-10-23,
+wss://relay.nos.social,global,live,28,18,94,5,strfry,git+https://github.com/hoytech/strfry.git,1.0.3,nos.social strfry relay,free,,,,,,,3,13,live probe 2026-10-23,
+wss://relay.us.whitenoise.chat,global,live,29,16,53,8,strfry,git+https://github.com/hoytech/strfry.git,1.1.3,Internet Privacy Foundation strfry Relay (US),free,,,,,,,3,10,live probe 2026-10-23,
+wss://eden.nostr.land,global,live,31,14,19,28,"NFDB (nostr.land, proprietary)",NFDB,2.0 γ5,✨ nostr.land,paid-no-fees,true,,false,,https://nostr.land,,5,0,live probe 2026-10-23,nostr.land family
+wss://nostr.data.haus,global,live,34,12,52,8,strfry,git+https://github.com/hoytech/strfry.git,1.1.3,data.haus nostr relay,free,,,,,,,3,10,live probe 2026-10-23,
+wss://relay.0xchat.com,global,unreachable (gaierror),36,11,24,20,strfry,git+https://github.com/hoytech/strfry.git,0.9.6-39-g32a3677,relay.0xchat.com,free,,,,,,,3,11,NIP-66 cache 2026-10-20 (monitor 19f3383d),0xchat default relay; DNS NXDOMAIN today; NIP-66 cache (Sep 2026) says strfry
+wss://indexer.coracle.social,global,live,37,11,49,9,strfry,git+https://github.com/hoytech/strfry.git,1.1.3,Coracle Indexer,free,,,,,,,3,2,live probe 2026-10-23,
+wss://premium.primal.net,global,live,38,11,108,5,strfry,git+https://github.com/hoytech/strfry.git,1.1.3,Primal Premium Relay,paid-unadvertised,,,,,,,3,10,live probe 2026-10-23,"Primal Premium relay (subscription via Primal app, ~$7/mo per primal.net/premium); NIP-11 shows no fees/payments_url/payment_required: completeness gap in strfry config"
+wss://bitcoiner.social,global,live,39,11,256,3,strfry,git+https://github.com/hoytech/strfry.git,1.1.0,bitcoiner.social,free,,,,,,,3,10,live probe 2026-10-23,
+wss://asia.vectorapp.io/nostr,global,live,40,10,184,3,Vector relay,https://github.com/VectorPrivacy,0.1.0,Vector Asia Relay,restricted (non-payment: WoT/allowlist/auth),,true,false,,,,7,17,live probe 2026-10-23,
+wss://relay.dreamith.to,global,live,41,10,101,5,Ditto,https://gitworkshop.dev/soapbox.pub/ditto-relay,2.5.0,Ditto Relay,free,false,,false,,,,11,10,live probe 2026-10-23,
+wss://relayable.org,global,unreachable (ConnectionRefusedError),42,10,126,4,unknown,,,,unknown,,,,,,,0,,none (no live or cached NIP-11),
+wss://purplerelay.com,global,live,43,10,29,14,strfry,git+https://github.com/hoytech/strfry.git,1.1.3,PurpleRelay,free,,,,,,,3,11,live probe 2026-10-23,
+wss://nostr.einundzwanzig.space,global,live,44,10,40,12,nostr-rs-relay,https://git.sr.ht/~gheartsfield/nostr-rs-relay,0.10.0,Einundzwanzig Nostr Relay,restricted (non-payment: WoT/allowlist/auth),false,true,,,,,2,11,live probe 2026-10-23,German community relay; restricted_writes (nostr-rs-relay allowlist/NIP-05; guess)
+wss://relay.nostr.bg,global,unreachable (gaierror),45,9,32,14,unknown (DNS gone),,,,unknown,,,,,,,0,,none (no live or cached NIP-11),
+wss://nostr.cypherpunk.today,global,live,54,9,370,2,strfry,git+https://github.com/hoytech/strfry.git,1.1.3,nostr.cypherpunk.today,free,,,,,,,3,11,live probe 2026-10-23,
+wss://sendit.nosflare.com,global,live,55,9,34,13,nosflare (Cloudflare Workers),https://github.com/Spl0itable/nosflare,4.20.69,Send It by Nosflare,free,,,,,,,0,15,live probe 2026-10-23,
+wss://relay.btcforplebs.com,global,live,57,8,,,nostr-rs-relay,https://git.sr.ht/~gheartsfield/nostr-rs-relay,0.9.0,BTCforPlebs Relay,free,false,false,,,,,2,11,live probe 2026-10-23,
+wss://relay.divine.video,global,live,58,7,,,divine-funnelcake,divine-funnelcake,0.1.0,Funnelcake,free,false,false,false,,,,10,24,live probe 2026-10-23,Divine (short video) relay
+wss://relay.current.fyi,global,unreachable (gaierror),59,7,46,9,unknown (DNS gone),,,,unknown,,,,,,,0,,none (no live or cached NIP-11),
+wss://user.kindpag.es,global,live,72,6,83,6,strfry,git+https://github.com/hoytech/strfry.git,0.9.6-26-gc0dec7c,user.kindpag.es,free,,,,,,,0,12,live probe 2026-10-23,
+wss://atlas.nostr.land,global,live,74,6,39,12,"NFDB (nostr.land, proprietary)",NFDB,2.0 γ5,✨ nostr.land,paid-no-fees,true,,false,,https://nostr.land,,5,0,live probe 2026-10-23,nostr.land family
+wss://relay.nsite.lol,global,live,77,6,61,7,strfry,git+https://github.com/hoytech/strfry.git,1.1.2-148-g4cd3cf6,nsite.lol relay,free,,,,,,,3,11,live probe 2026-10-23,
+wss://theforest.nostr1.com,global,live,81,6,127,4,strfry,git+https://github.com/hoytech/strfry.git,strfry v315-3cff8c9,The Forest,paid (fees advertised),true,,false,"{""admission"":[{""amount"":1000000,""unit"":""msats""}]}",https://TheForest.nostr1.com,,11,15,live probe 2026-10-23,"nostr1.com hosted (relay.tools-style strfry): 1,000 sats admission"
+wss://relay.fountain.fm,global,live,82,6,,,,,,fountain.fm,free,,,,,,,1,6,live probe 2026-10-23,Fountain podcast app relay; NIP-11 has no software field
+wss://puravida.nostr.land,global,live,88,5,151,4,"NFDB (nostr.land, proprietary)",NFDB,2.0 γ5,✨ nostr.land,paid-no-fees,true,,false,,https://nostr.land,,5,0,live probe 2026-10-23,nostr.land family
+wss://relay.orangepill.dev,global,live,107,4,149,4,nostream,git+https://github.com/cameri/nostream.git,3.0.0,orangepill.dev,paid (fees advertised),true,true,false,"{""admission"":[],""subscription"":[{""amount"":3000000,""unit"":""msats"",""period"":2592000}]}",https://relay.orangepill.dev/invoices,,15,20,live probe 2026-10-23,"nostream with fees: 3,000 sats/30d"
+wss://relay.coinos.io,global,live,111,4,142,4,strfry,git+https://github.com/hoytech/strfry.git,1.1.0-beta5,Coinos,free,,,,,,,3,10,live probe 2026-10-23,
+wss://relay.nostrplebs.com,global,live,112,4,263,3,strfry,git+https://github.com/hoytech/strfry.git,0.9.6-39-g32a3677,relay.nostrplebs.com,free,,,,,,,3,10,live probe 2026-10-23,
+wss://relay.noswhere.com,global,live,114,4,103,5,custom/undisclosed,custom,0.0.1,relay.noswhere.com,free,,,,,,,0,3,live probe 2026-10-23,
+wss://relay.nostrcheck.me,global,live,117,4,104,5,nostrcheck-server,https://github.com/quentintaranpino/nostrcheck-server,0.7.1.0159,nostrcheck.me,free,,,false,,,,11,28,live probe 2026-10-23,
+wss://nostr21.com,global,live,134,3,37,12,strfry,git+https://github.com/hoytech/strfry.git,strfry v315-3cff8c9,nostr21.com,paid (fees advertised),true,,false,"{""admission"":[{""amount"":21000,""unit"":""msats""}]}",https://nostr21.com,,11,15,live probe 2026-10-23,nostr1.com-hosted strfry: 21 sats admission
+wss://relay.azzamo.net,global,live,140,3,316,2,strfry,https://github.com/hoytech/strfry,1.1.0,Azzamo Premium Nostr relay,paid-no-fees,true,true,false,,https://dashboard.azzamo.net/login,,6,11,live probe 2026-10-23,"Azzamo premium; payments_url = dashboard login, no fees object"
+wss://auth.nostr1.com,global,live,141,3,90,5,strfry,git+https://github.com/hoytech/strfry.git,strfry v315-3cff8c9,auth.nostr1.com,restricted (non-payment: WoT/allowlist/auth),false,,true,,,,11,16,live probe 2026-10-23,
+wss://relay.lexingtonbitcoin.org,global,live,331,2,163,4,wot-relay (khatru),https://github.com/bitvora/wot-relay,,Lexington Bitcoin Meetup WoT relay,free,,,,,,,0,6,live probe 2026-10-23,
+wss://filter.nostr.wine,global,live,,,143,4,nostr.wine (proprietary),https://filter.nostr.wine,1.6,filter.nostr.wine,paid (fees advertised),true,true,true,"{""subscription"":[{""amount"":10000000,""unit"":""msats"",""period"":2592000}]}",https://nostr.wine/add-time,,8,11,live probe 2026-10-23,"paid aggregator/filter: 10,000 sats per 30 days"
+wss://inbox.nostr.wine,global,live,,,231,3,nostr.wine (proprietary),https://inbox.nostr.wine,0.1.4,inbox.nostr.wine,paid (fees advertised),true,,true,"{""subscription"":[{""amount"":2500000,""period"":2592000,""unit"":""msats""}]}",https://inbox.nostr.wine,,10,7,live probe 2026-10-23,"paid inbox relay: 2,500 sats per 30 days"
+wss://relay.yakihonne.com,global,unreachable (SSLCertVerificationError),,,,,,,,,unknown,,,,,,,0,,none (no live or cached NIP-11),
+wss://nostr.azzamo.net,global,live,,,,,strfry,git+https://github.com/hoytech/strfry.git,1.0.4,Azzamo freemium Nostr Relay,free,,,,,,,3,8,live probe 2026-10-23,
+wss://relay.mostr.pub,global,live,,,,,Ditto,https://gitworkshop.dev/soapbox.pub/ditto-relay,2.5.0,Ditto Relay,free (bridge),false,,false,,,,11,10,live probe 2026-10-23,Mostr ActivityPub bridge (Soapbox)
+wss://relay.momostr.pink,global,live,,,,,rockstr (momostr),git+https://github.com/nanikamado/rockstr.git,0.1.0,rockstr default,free (bridge),,,,,,,2,6,live probe 2026-10-23,"momostr Fediverse/Misskey bridge (Japanese-run, nanikamado); bridged accounts dominate raw kind-10002 counts"
+wss://relay.mostro.network,global,live,,,,,mostro relay (unknown base),https://mostro.network,0.4.9,Mostro relay,free,,,,,,,9,16,live probe 2026-10-23,
+wss://relay.olas.app,global,live,,,,,strfry,git+https://github.com/hoytech/strfry.git,1.0.4,Olas,free,,,,,,,3,,live probe 2026-10-23,
+wss://nostr.fmt.wiz.biz,global,unreachable (OSError),,,,,strfry,git+https://github.com/hoytech/strfry.git,v216-4736f37,the wiz strfry relay,free,,,,,,,0,12,NIP-66 cache 2024-09-17 (monitor 9bbbb845),
+wss://shu01.shugur.net,global,unreachable (TimeoutError),,,59,8,Shugur relay (Go),shugur,v1.3.5,shu01.shugur.net,free,false,false,false,,,,11,33,NIP-66 cache 2026-07-26 (monitor 9b85d54c),"Shugur relay (Go, shugur-network). Appears mostly in one cluster of ~1,970 identical relay lists in the JP sample: likely bot/spam accounts"
+wss://www.nostr.ltd,global,unreachable (ConnectionRefusedError),,,42,11,nostr.ltd,nostr.ltd,dev,nostr.ltd,free,false,false,false,,,,11,77,NIP-66 cache 2026-10-15 (monitor 9ba1d789),"in the same ~1,970 identical-list cluster as shu01.shugur.net (likely bot accounts)"
+wss://yabu.me,jp,live,27,21,1,225,strfry,git+https://github.com/hoytech/strfry.git,1.0.4,やぶみ 🏹📨,free,,,,,,,3,10,live probe 2026-10-23,main JP aggregator (strfry)
+wss://relay-jp.nostr.wirednet.jp,jp,"geo-blocked (JP only, HTTP 403 Cloudflare)",63,7,4,142,strfry (guess: siblings relay./ipv6.nostr.wirednet.jp are strfry),,,,unknown,,,,,,,0,,none (no live or cached NIP-11),
+wss://r.kojira.io,jp,"geo-blocked (JP only, HTTP 403 Cloudflare)",62,7,5,123,strfry (guess: sibling x.kojira.io is strfry),,,,unknown,,,,,,,0,,none (no live or cached NIP-11),
+wss://relay.nostr.wirednet.jp,jp,live,46,9,7,88,strfry,git+https://github.com/hoytech/strfry.git,1.0.4-2-gc15be27,relay.nostr.wirednet.jp,free,,,,,,,3,10,live probe 2026-10-23,
+wss://nostr.compile-error.net,jp,"geo-blocked (JP only, HTTP 403 Cloudflare)",142,3,15,33,mattn/nostr-relay (Go),https://github.com/mattn/nostr-relay,0.0.267,nostr-relay,free,false,false,false,,,,11,15,NIP-66 cache 2026-10-23 (monitor 9bb7cd94),"mattn; NIP-66 cache: mattn/nostr-relay, !payment"
+wss://nrelay-jp.c-stellar.net,jp,"geo-blocked (JP only, HTTP 403 Cloudflare)",145,3,18,29,unknown (jiftechnify; strfry+policy plugin guess),,,,unknown,,,,,,,0,,none (no live or cached NIP-11),
+wss://x.kojira.io,jp,live,127,4,22,23,strfry,git+https://github.com/hoytech/strfry.git,1.1.2-154-g963707a,kojirafry,free,,,,,,,3,13,live probe 2026-10-23,
+wss://r.ydg.works,jp,live,,,23,22,strfry,git+https://github.com/hoytech/strfry.git,1.1.0,r.ydg.works,free,,,,,,,3,11,live probe 2026-10-23,
+wss://nostr.fediverse.jp,jp,"geo-blocked (JP only, HTTP 403 Cloudflare)",,,25,20,strfry (guess: same operator as yabu.me/relay-jp.shino3.net),,,,unknown,,,,,,,0,,none (no live or cached NIP-11),
+wss://relay-jp.shino3.net,jp,"geo-blocked (JP only, HTTP 403 Cloudflare)",240,2,26,17,strfry,git+https://github.com/hoytech/strfry.git,,,free,,,,,,,0,,NIP-66 cache 2024-03-10 (monitor 9ba0ce3d),NIP-66 cache from Mar 2024 only (strfry)
+wss://search.nos.today,jp,live,86,5,28,16,searchnos,searchnos,v0.1.0-42e728b,searchnos,free,,,,,,,0,7,live probe 2026-10-23,JP NIP-50 search relay (darashi/searchnos)
+wss://snowflare.cc,jp,live,282,2,30,14,"snowflare (SnowCait, CF Workers)",https://github.com/SnowCait/snowflare,0.1.0,Snowflare,restricted (non-payment: WoT/allowlist/auth),,true,false,,,,6,7,live probe 2026-10-23,
+wss://directory.yabu.me,jp,live,56,8,35,12,strfry,git+https://github.com/hoytech/strfry.git,1.0.4,やぶみ電話帳,free,,,,,,,3,10,live probe 2026-10-23,yabu.me directory relay for kind 0/3/10002 (strfry)
+wss://nostr.holybea.com,jp,unreachable (TimeoutError),,,44,10,,,,,unknown,,,,,,,0,,none (no live or cached NIP-11),
+wss://cagliostr.compile-error.net,jp,"geo-blocked (JP only, HTTP 403 Cloudflare)",,,45,10,cagliostr,https://github.com/mattn/cagliostr,0.0.203,cagliostr,free,false,false,false,,,,12,16,NIP-66 cache 2026-10-23 (monitor 9bb7cd94),"mattn; NIP-66 cache: cagliostr, !payment"
+wss://nostream.ocha.one,jp,"geo-blocked (JP only, HTTP 403 nginx; likely IP/geo restriction)",,,50,8,nostream (guess from hostname),,,,unknown,,,,,,,0,,none (no live or cached NIP-11),
+wss://nostrja-kari.heguro.com,jp,live,,,63,7,nostream,git+https://github.com/Cameri/nostream.git,1.22.6,nostrja-kari.heguro.com,free,false,,false,"{""admission"":[]}",https://nostrja-kari.heguro.com/invoices,,11,14,live probe 2026-10-23,"JP nostream; fees.admission empty array, payment_required false"
+wss://r.bitcoinhold.net,jp,unreachable (gaierror),,,65,7,,,,,unknown,,,,,,,0,,none (no live or cached NIP-11),
+wss://relay.damustr.com,jp,down (HTTP 502),,,68,7,,,,,unknown,,,,,,,0,,none (no live or cached NIP-11),
+wss://nostr-relay.nokotaro.com,jp,down (HTTP 530),,,69,7,,,,,unknown,,,,,,,0,,none (no live or cached NIP-11),
+wss://nrelay.c-stellar.net,jp,down (HTTP 502),,,70,7,,,,,unknown,,,,,,,0,,none (no live or cached NIP-11),
+wss://nostr-relay.moctane.net,jp,live,159,3,71,6,mocrelay,https://github.com/high-moctane/mocrelay,,Mocrelay,free,,,,,,,6,8,live probe 2026-10-23,
+wss://lang.relays.land/ja,jp,live,,,73,6,khatru,lang/khatru/relays.land,n/a,Japanese,free,,,,,,,0,8,live probe 2026-10-23,
+wss://relay.yozora.world,jp,unreachable (OSError),,,147,4,,,,,paid (per awesome-nostr-japan),,,,,,,0,,none (no live or cached NIP-11),'Paid relay via Starlink' per awesome-nostr-japan; unreachable from here
+wss://ipv6.nostr.wirednet.jp,jp,unreachable (OSError),,,,,strfry,git+https://github.com/hoytech/strfry.git,1.0.3-10-g54da4a7,relay.nostr.wirednet.jp,free,,,,,,,3,10,NIP-66 cache 2025-10-13 (monitor 5e60b1ca),
