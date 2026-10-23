@@ -20,8 +20,8 @@ Legend: **NIP-11 PR** = the completeness change · **Payments PR** = the optiona
 | [ditto-core (old Ditto server)](https://gitlab.com/soapbox-pub/ditto-core) | TypeScript (Deno, Postgres) | unclear | partial | planned | planned |
 | [ORLY](https://git.smesh.lol/orly) | Go (Badger/Neo4j) | y | partial (name, description, pubkey, supported_nips, softwar… | planned | planned |
 | [nosflare](https://github.com/Spl0itable/nosflare) | TypeScript (Cloudflare Worker… | y | partial (limitation only auth_required/payment_required/res… | planned | planned |
-| [nostr-relay (mattn)](https://github.com/mattn/nostr-relay) | Go (relayer; sqlite/Postgres/… | y | partial (struct-based; hard-coded defaults overridable by e… | in preparation | in preparation |
-| [cagliostr](https://github.com/mattn/cagliostr) | C++ (sqlite3) | y | partial (hard-coded JSON; "fees":{} empty; no payments_url,… | in preparation | in preparation |
+| [nostr-relay (mattn)](https://github.com/mattn/nostr-relay) | Go (relayer; sqlite/Postgres/… | y | partial (struct-based; hard-coded defaults overridable by e… | [#36](https://github.com/mattn/nostr-relay/pull/36) (draft) | Bark paid writes [#37](https://github.com/mattn/nostr-relay/pull/37) (draft, on #36) |
+| [cagliostr](https://github.com/mattn/cagliostr) | C++ (sqlite3) | y | partial (hard-coded JSON; "fees":{} empty; no payments_url,… | [#34](https://github.com/mattn/cagliostr/pull/34) (draft) | planned |
 | [searchnos](https://github.com/darashi/searchnos) | Rust (Elasticsearch/OpenSearc… | y | partial (name, description, software, supported_nips, versi… | planned | planned |
 | [grain](https://github.com/0ceanslim/grain) | Go (MongoDB; own impl, not kh… | y | partial (config file relay_metadata.json; serves most top-l… | planned | planned |
 | [Citrine](https://github.com/greenart7c3/Citrine) | Kotlin (Android) | y | partial (name, description, pubkey, self, contact, icon, su… | planned | planned |

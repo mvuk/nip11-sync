@@ -8,11 +8,11 @@
     "payments": "Bark processor [#258](https://github.com/scsibug/nostr-rs-relay/pull/258) (draft, stacked on #257)"
   },
   "nostr-relay (mattn)": {
-    "nip11": "in preparation",
-    "payments": "in preparation"
+    "nip11": "[#36](https://github.com/mattn/nostr-relay/pull/36) (draft)",
+    "payments": "Bark paid writes [#37](https://github.com/mattn/nostr-relay/pull/37) (draft, on #36)"
   },
   "cagliostr": {
-    "nip11": "in preparation",
-    "payments": "in preparation"
+    "nip11": "[#34](https://github.com/mattn/cagliostr/pull/34) (draft)",
+    "payments": "planned"
   }
 }
