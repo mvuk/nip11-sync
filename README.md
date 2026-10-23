@@ -23,6 +23,11 @@ is what lets clients show limits, discover paid relays, and pay them.
    Lightning gateway) and **native Ark payments** (arkoor) to per-user Ark addresses, advertised
    through the track-1 fields. Other backends fit the same shape.
 
+## Pay per access
+
+The shared design for the optional payment backends (Lightning + Ark, NIP-11 discovery) is in
+[`PAY-PER-ACCESS.md`](PAY-PER-ACCESS.md).
+
 ## Status
 
 [`STATUS.md`](STATUS.md) has one row per implementation, with open PRs linked.
