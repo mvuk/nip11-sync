@@ -47,8 +47,10 @@ The same idea for media servers. Blossom's BUD-07 already uses HTTP 402 with `X-
 headers and allows new methods.
 - `X-Ark`, native Ark payments for BUD-07: spec [`specs/blossom-x-ark.md`](specs/blossom-x-ark.md),
   draft PR [hzrd149/blossom#116](https://github.com/hzrd149/blossom/pull/116).
-- Server support (inventory in progress): nostrcheck-server already sends `X-Lightning` and runs
-  share.yabu.me and cdn.nostrcheck.me; route96 bills over LND; blob-drop takes Cashu.
+- Server support: inventory of **51 Blossom implementations** and ~30 public hosts in
+  [`inventory/blossom/`](inventory/blossom/servers.md). Only 3 send BUD-07 headers today (nostrcheck-server: Lightning;
+  blob-drop and almond: Cashu), none fully spec-correct. First target: nostrcheck-server, which runs share.yabu.me
+  (the Japanese community's media server), cdn.nostrcheck.me, nostrcheck.me and nostrage.com.
 
 ## Contributing
 
