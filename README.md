@@ -61,7 +61,7 @@ the proposal issue, the Ark Payments extension is being reworked to cover only w
 - Proposal issue: [nostr-wallet-connect/nwc#10](https://github.com/nostr-wallet-connect/nwc/issues/10)
 - Ark Payments extension spec (being reworked): [nostr-wallet-connect/nwc#11](https://github.com/nostr-wallet-connect/nwc/pull/11)
 - Payment-rail-neutral NIP-47 core wording: [nostr-protocol/nips#2520](https://github.com/nostr-protocol/nips/pull/2520)
-- Zaps over BIP-321 rails (rail-neutral zaps, Ark first; beside NIP-57 and NIP-61): [nostr-protocol/nips#2521](https://github.com/nostr-protocol/nips/pull/2521), with a NIP-A3 `bip321` profile entry (PR to come)
+- Zaps over BIP-321 rails (rail-neutral zaps, Ark first; beside NIP-57 and NIP-61): [nostr-protocol/nips#2521](https://github.com/nostr-protocol/nips/pull/2521), with a NIP-A3 `bip321` profile entry: [nostr-protocol/nips#2522](https://github.com/nostr-protocol/nips/pull/2522)
 
 ## Blossom (file hosting)
 

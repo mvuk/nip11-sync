@@ -68,8 +68,8 @@ Summary (details below):
 |---|---|---|---|---|---|---|
 | a. Relay fee | NIP-11 `payments_url` / relay message → dynamic URI | `pay(uri)` | same-server Ark, else BOLT11 | relay's wallet sees the receive, credits the pubkey | NIP-11 + per-implementation backends | posted (relays); gap: client UI, a NIP for the request |
 | b. Upload / download | Blossom `402` `X-Ark` (+ `X-Lightning`) | `pay(uri)` | same-server Ark, else BOLT11 | retry with `X-Ark: <address>` or `X-Lightning: <preimage>`, single use | BUD-07 + `X-Ark` | posted (spec, nostrcheck) |
-| c. Tip a person | profile `kind:10133` `bip321` (or BIP-353) → static URI | `pay(uri, amount)` | same-server Ark, else `lno=`, else on-chain | none public; payer's wallet record | NIP-A3 `bip321` + NWC-321 | local (NIP-A3 PR) |
-| d. Zap a note | same static URI + `receipt-key` | `pay(uri, amount)` + `kind:9740` | same as (c) | `kind:9741` signed by the receipt key; `9735` for legacy | Zaps over BIP-321 rails (#2521 v2) + NIP-57 | v1 posted, v2 local |
+| c. Tip a person | profile `kind:10133` `bip321` (or BIP-353) → static URI | `pay(uri, amount)` | same-server Ark, else `lno=`, else on-chain | none public; payer's wallet record | NIP-A3 `bip321` + NWC-321 | posted (draft): [nostr-protocol/nips#2522](https://github.com/nostr-protocol/nips/pull/2522) |
+| d. Zap a note | same static URI + `receipt-key` | `pay(uri, amount)` + `kind:9740` | same as (c) | `kind:9741` signed by the receipt key; `9735` for legacy | Zaps over BIP-321 rails (#2521) + NIP-57 | posted (draft, v2) |
 | e. Exact amount | payee's wallet `receive(amount)` → dynamic URI, shared as QR / DM | `pay(uri)` | same-server Ark, else BOLT11/BOLT12 | payee's wallet: fresh address / invoice, `payment_received` | NWC-321 `receive` + NWC Ark Payments | spec posted; gap B2 |
 | f. Receive offline | static URI | (any) | Ark mailbox; Lightning needs B4 | receipt delayed until the receipt key is online | same as (c)/(d) | Ark ✅; Lightning gap B4 |
 | g. Cross-Ark | any URI with a foreign `ark=` | `pay(uri)` | Lightning, gateway → gateway | as for the flow it is part of | BIP-321 + NWC-321 | dynamic ✅ one-server; two-server test T1 |
@@ -111,9 +111,9 @@ Summary (details below):
 - **Pay:** the client asks for an amount, then `pay(uri, amount)`. **Rail:** same-server Ark, else `lno=`, else
   on-chain.
 - **Proof:** none public: a tip is a private payment. The payer's wallet keeps the record.
-- **Spec:** NIP-A3 `bip321` type (small PR, local), NWC-321, NWC Ark Payments
+- **Spec:** NIP-A3 `bip321` type ([nostr-protocol/nips#2522](https://github.com/nostr-protocol/nips/pull/2522)), NWC-321, NWC Ark Payments
   ([nwc#11](https://github.com/nostr-wallet-connect/nwc/pull/11)).
-- **Status:** NIP-A3 PR ready locally. Gaps: clients (C1), bark-nwc `pay` (B2), wallets publishing the entry.
+- **Status:** NIP-A3 PR posted as a draft ([nostr-protocol/nips#2522](https://github.com/nostr-protocol/nips/pull/2522)). Gaps: clients (C1), bark-nwc `pay` (B2), wallets publishing the entry.
 
 ### d. Zap a note
 
