@@ -190,14 +190,31 @@ Each step unblocks the ones below it. Owners in brackets.
    - keep nwc#11, nips#2520 and blossom#116 in step with this map;
    - later, once code works: a small NIP-11 addition that advertises a BIP-321 request (no new format).
 2. **Bark wallet** [Bark team]
-   - **B1** prefer a same-server `ark=` over Lightning when both are offered (CLI defaults to Lightning today);
-   - **B3** `create_wallet` honours the SOCKS proxy (patch ready, needs an MR).
-3. **bark-nwc** [Bark team], needs B1
-   - **B2** NWC-321 `pay` and `receive`, with `ark` payment records in `lookup_payment`, `list_transactions` and
+   - **B1** prefer a same-server `ark=` over Lightning when both are offered. **Fixed on Bark master, unreleased**
+     (checked 24 Oct 2026 at 2ed8223a): barkd's `POST /send` and the new `bark-cli` take an optional `method` and
+     otherwise pick Ark, then Lightning, then on-chain. Only the old CLI (`bark` in 0.8.0, `bark-legacy` on master)
+     still shows a menu in URI order with Lightning as default; it could sort by `estimate_payment_fees` (already in
+     the library) if anyone still needs it;
+   - **B3** `create_wallet` honours the SOCKS proxy: **draft MR [!2674](https://gitlab.com/ark-bitcoin/bark/-/merge_requests/2674)** (24 Oct 2026).
+3. **bark-nwc** [Bark team], needs B1. On master bark-nwc is the transport only (relay loop, connection store,
+   `RequestHandler` trait); no wallet handler is wired into barkd yet, and the `nostr` crate's NIP-47 types have no
+   NWC-321 `pay`, so it needs a custom method or an upstream addition to rust-nostr.
+   - **B2** (draft MR [!2662](https://gitlab.com/ark-bitcoin/bark/-/merge_requests/2662), reworked 24 Oct 2026 onto NWC-321; 4/4 integration tests pass on local regtest) NWC-321 `pay` and `receive`, with `ark` payment records in `lookup_payment`, `list_transactions` and
      notifications (NWC Ark Payments);
    - **B5** receipt-key service: watch `kind:9740`, confirm by reference, sign `kind:9741`; publish the user's
      `kind:10133` (`bip321` + `receipt-key`).
-4. **Offline cross-Ark receive** [Bark team]
+   - **B6** cross-Ark Lightning can be impossible by configuration (found on local regtest, 24 Oct 2026). A Bark
+     receive invoice asks for `exit_delta + 2·htlc_expiry_delta + 32` blocks (wallet margins 12 + 18 + 2); the
+     paying server caps the route at `htlc_send_expiry_delta − htlc_expiry_delta`. Cross-Ark works only if
+     `exit_B + 2·htlc_B + 32 + route deltas ≤ send_A − htlc_A`. With Bark's regtest template (144/40/258) that is
+     256 > 218, so it never works; signet (12/6/256) is 56 ≤ 250, fine; mainnet not checked. Fails as
+     `LightningFailureCltvTooLong`. Fix options: document the constraint for operators, have captaind warn at
+     startup, or advertise the send budget so wallets size invoices to fit. Worth raising with the team.
+   - **B7** a sender did not keep the VTXOs it created for the recipient, so zaps to a reused Ark address could not
+     be told apart (simulation: 11 of 16 Ark zap receipts unconfirmable, `MULTIPLE_MATCHES`). **Fixed in !2662**
+     (commit "bark: record the VTXOs an arkoor payment creates for the recipient"): stored as `recipient_vtxos` on the
+     movement and reported in `lookup_payment` `details.vtxos`.
+4. **Offline cross-Ark receive** [Bark team] (confirmed by the regtest simulation, 24 Oct 2026: a static NIP-A3 link can only carry `ark=`, so 13 of 29 zaps from the other Ark server had nothing to pay)
    - **B4** a static Lightning target that works while the wallet is offline: BOLT12 offers answered by the Ark
      server or an always-on service, or a Lightning address via bark-nwc's LNURL bridge.
 5. **Servers** [Second, with each project's maintainers], needs B2 for end-to-end tests
