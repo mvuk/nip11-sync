@@ -14,8 +14,13 @@ is what lets clients show limits, discover paid relays, and pay them.
 
 ## One way to pay
 
-[`UNIFIED-PAYMENTS.md`](UNIFIED-PAYMENTS.md): every payment request is one BIP-321 URI (`ark=` + `lightning=`), paid with
-NWC-321 `pay`; the wallet pays natively over Ark on the same Ark server, otherwise over Lightning, otherwise on-chain.
+Payments within one Ark server resolve natively over Ark (arkoor), the most sovereign option: self-custodial VTXOs
+with a unilateral exit, instant, near-free, and the recipient can receive while offline. Between different Ark servers,
+and with everyone else, Lightning. We build on what already exists (BIP-321, NWC-321, NWC-09, NIP-57, NIP-A3, BUD-07)
+rather than inventing parallel formats: every payment request is one BIP-321 URI, paid with NWC-321 `pay`, and the
+wallet picks the rail. The full map of actors, flows and roadmap is in [`UNIFIED-PAYMENTS.md`](UNIFIED-PAYMENTS.md).
+
+All proposals here are drafts, open to iteration and revision; feedback is welcome.
 
 ## Two tracks per implementation
 
@@ -56,7 +61,7 @@ the proposal issue, the Ark Payments extension is being reworked to cover only w
 - Proposal issue: [nostr-wallet-connect/nwc#10](https://github.com/nostr-wallet-connect/nwc/issues/10)
 - Ark Payments extension spec (being reworked): [nostr-wallet-connect/nwc#11](https://github.com/nostr-wallet-connect/nwc/pull/11)
 - Payment-rail-neutral NIP-47 core wording: [nostr-protocol/nips#2520](https://github.com/nostr-protocol/nips/pull/2520)
-- Ark Zaps (tips over Ark, beside NIP-57 and NIP-61): [nostr-protocol/nips#2521](https://github.com/nostr-protocol/nips/pull/2521)
+- Zaps over BIP-321 rails (rail-neutral zaps, Ark first; beside NIP-57 and NIP-61): [nostr-protocol/nips#2521](https://github.com/nostr-protocol/nips/pull/2521), with a NIP-A3 `bip321` profile entry (PR to come)
 
 ## Blossom (file hosting)
 
