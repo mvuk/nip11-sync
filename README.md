@@ -23,6 +23,13 @@ is what lets clients show limits, discover paid relays, and pay them.
    Lightning gateway) and **native Ark payments** (arkoor) to per-user Ark addresses, advertised
    through the track-1 fields. Other backends fit the same shape.
 
+**One payment request format everywhere.** Relays and Blossom servers present what to pay as a single
+[BIP-321](https://github.com/bitcoin/bips/blob/master/bip-0321.mediawiki) URI,
+`bitcoin:?ark=<ark address>&lightning=<bolt11>&amount=<btc>`, and clients pay it with the
+[NWC-321](https://github.com/nostr-wallet-connect/nwc/blob/main/321.md) `pay` method. The wallet picks
+`ark` when the address belongs to its own Ark server (the address encodes the server) and otherwise
+another instruction, typically `lightning`. No new wallet methods or client-side server matching.
+
 ## Pay per access
 
 The shared design for the optional payment backends (Lightning + Ark, NIP-11 discovery) is in
@@ -37,8 +44,12 @@ The full inventory of **108 relay implementations** (55 maintained) is in
 
 ## Related: Ark payments in Nostr Wallet Connect
 
+Paying goes through the existing NWC-321 `pay` method with a BIP-321 URI (see above). Following review on
+the proposal issue, the Ark Payments extension is being reworked to cover only what is Ark-specific: the
+`ark` payment type and its details (VTXO ids, "settled" meaning cosigned by the Ark server).
+
 - Proposal issue: [nostr-wallet-connect/nwc#10](https://github.com/nostr-wallet-connect/nwc/issues/10)
-- Ark Payments extension spec: [nostr-wallet-connect/nwc#11](https://github.com/nostr-wallet-connect/nwc/pull/11)
+- Ark Payments extension spec (being reworked): [nostr-wallet-connect/nwc#11](https://github.com/nostr-wallet-connect/nwc/pull/11)
 - Payment-rail-neutral NIP-47 core wording: [nostr-protocol/nips#2520](https://github.com/nostr-protocol/nips/pull/2520)
 - Ark Zaps (tips over Ark, beside NIP-57 and NIP-61): [nostr-protocol/nips#2521](https://github.com/nostr-protocol/nips/pull/2521)
 
@@ -47,7 +58,9 @@ The full inventory of **108 relay implementations** (55 maintained) is in
 The same idea for media servers. Blossom's BUD-07 already uses HTTP 402 with `X-Lightning` and `X-Cashu`
 headers and allows new methods.
 - `X-Ark`, native Ark payments for BUD-07: spec [`specs/blossom-x-ark.md`](specs/blossom-x-ark.md),
-  draft PR [hzrd149/blossom#116](https://github.com/hzrd149/blossom/pull/116).
+  draft PR [hzrd149/blossom#116](https://github.com/hzrd149/blossom/pull/116). The header is a BIP-321 URI
+  (`ark=` plus, optionally, the same `lightning=` invoice as `X-Lightning`) that a client hands straight to
+  NWC-321 `pay`.
 - nostrcheck-server (share.yabu.me, cdn.nostrcheck.me): BUD-07 correctness
   [#61](https://github.com/quentintaranpino/nostrcheck-server/pull/61), Bark provider with Lightning and `X-Ark`
   [#62](https://github.com/quentintaranpino/nostrcheck-server/pull/62).
