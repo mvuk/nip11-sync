@@ -12,6 +12,11 @@ relay.nostr.wirednet.jp (all strfry, which carries roughly two thirds of measure
 3 of the 13 `limitation` fields and no `fees`. A complete, consistent NIP-11 across implementations
 is what lets clients show limits, discover paid relays, and pay them.
 
+## One way to pay
+
+[`UNIFIED-PAYMENTS.md`](UNIFIED-PAYMENTS.md): every payment request is one BIP-321 URI (`ark=` + `lightning=`), paid with
+NWC-321 `pay`; the wallet pays natively over Ark on the same Ark server, otherwise over Lightning, otherwise on-chain.
+
 ## Two tracks per implementation
 
 1. **NIP-11 complete.** Advertise every `limitation` field the software actually enforces, plus
