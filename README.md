@@ -40,6 +40,7 @@ The full inventory of **108 relay implementations** (55 maintained) is in
 - Proposal issue: [nostr-wallet-connect/nwc#10](https://github.com/nostr-wallet-connect/nwc/issues/10)
 - Ark Payments extension spec: [nostr-wallet-connect/nwc#11](https://github.com/nostr-wallet-connect/nwc/pull/11)
 - Payment-rail-neutral NIP-47 core wording: [nostr-protocol/nips#2520](https://github.com/nostr-protocol/nips/pull/2520)
+- Ark Zaps (tips over Ark, beside NIP-57 and NIP-61): [nostr-protocol/nips#2521](https://github.com/nostr-protocol/nips/pull/2521)
 
 ## Blossom (file hosting)
 
